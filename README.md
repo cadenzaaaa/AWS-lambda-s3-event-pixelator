@@ -10,6 +10,6 @@ This mini-project demonstrates how to build a serverless image processing pipeli
 
 How it works:
 
-1.) Our event object(user-uploaded image) is sent to our 'source' bucket where then our lambda function is called and reads the images from the source bucket.
-2.) Lambda function is deployed which "pixelates" our images. lambda_function.py is uploaded in conjunction with the PIL library to a folder and then converted to zip in order to be deployed by the lambda function.
-3.) The lambda function takes the image it received from source and begins to pixelate the image into 5 different sizes(8x8, 16x16, 32x32, 48x48, 64x64). The processed images are then stored into the 'processed' bucket.
+1. Our event object(user-uploaded image) is sent to our 'source' bucket where then our lambda function is called and reads the images from the source bucket.
+2. Lambda function is deployed which "pixelates" our images. lambda_function.py is uploaded in conjunction with the PIL library to a folder and then converted to zip in order to be deployed by the lambda function.
+3. The lambda function takes the image it received from source and begins to pixelate the image into 5 different sizes(8x8, 16x16, 32x32, 48x48, 64x64). The processed images are then stored into the 'processed' bucket.
