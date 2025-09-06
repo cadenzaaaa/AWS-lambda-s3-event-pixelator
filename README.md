@@ -7,3 +7,9 @@ This mini-project demonstrates how to build a serverless image processing pipeli
 3. **Deploy the Lambda function** with image processing logic (e.g., pixelation), provided via a `.zip` deployment package.
 4. **Configure an S3 trigger** on the source bucket to invoke the Lambda upon new object uploads.
 5. **Test it out** by uploading an image — the function processes it and saves the result in the processed bucket.
+
+How it works:
+
+1.) Our event object(user-uploaded image) is sent to our 'source' bucket where then our lambda function is called and reads the images from the source bucket.
+2.) Lambda function is deployed which "pixelates" our images. lambda_function.py is uploaded in conjunction with the PIL library to a folder and then converted to zip in order to be deployed by the lambda function.
+3.) The lambda function takes the image it received from source and begins to pixelate the image into 5 different sizes(8x8, 16x16, 32x32, 48x48, 64x64). The processed images are then stored into the 'processed' bucket.
